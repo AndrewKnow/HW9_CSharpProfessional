@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW9_CSharpProfessional
+namespace HW9_CSharpProfessional.Implementations
 {
-    public interface IMyCloneable<T>
+    public class MountainBicycle
     {
-        public T CloneBicycle();
     }
 }
