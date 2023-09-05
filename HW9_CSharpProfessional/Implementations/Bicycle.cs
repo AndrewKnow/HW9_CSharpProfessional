@@ -8,35 +8,31 @@ using System.Threading.Tasks;
 namespace HW9_CSharpProfessional.Implementations
 {
     /// <summary>
-    ///  Класс наследующий BicycleBase 
+    ///  Класс наследник BicycleBase 
     /// </summary>
     public class Bicycle : BicycleBase, ICloneable
     {
-        private string _brand { get; set; }
-        private string _type { get; set; }
-        private string _size { get; set; }
+        public string Transmission;
+        public string Wheels;
+        public string Frame;
 
-        public Bicycle(string brand, string type, string size) : base(brand, type, size)
+        public Bicycle(string Brand, string Type, string transmission, string wheels, string frame) : base(Brand, Type)
         {
-            _brand = brand;
-            _type = type;
-            _size = size;  
+            Transmission = transmission;
+            Wheels = wheels;
+            Frame = frame;
         }
 
-        public new object Clone()
+        public override Bicycle MyCloneBicycle()
+        {
+            Bicycle bicycle = new(Brand, Type, Transmission, Wheels, Frame);
+            return bicycle;
+        }
+
+        public override Bicycle Clone()
         {
             return MyCloneBicycle();
         }
 
-        public (string, string, string) GetBicycleInfo()
-        {
-            return (_brand,_type, _size);
-        }
-
-        public BicycleBase MyCloneBicycle()
-        {
-            Bicycle bicycle = new(_brand, _type, _size);
-            return bicycle;
-        }
     }
 }

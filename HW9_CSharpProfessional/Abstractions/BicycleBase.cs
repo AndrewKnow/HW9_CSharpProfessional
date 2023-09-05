@@ -13,26 +13,19 @@ namespace HW9_CSharpProfessional.Abstractions
     {
         public string Brand { get; set; }
         public string Type { get; set; }
-        public string Size { get; set; }
 
-        public BicycleBase(string brand, string type, string size)
+        public BicycleBase(string brand, string type)
         {
             Brand = brand;
             Type = type;
-            Size = size;
         }
 
-        public BicycleBase MyCloneBicycle()
+        public virtual BicycleBase MyCloneBicycle()
         {
-            return new BicycleBase(Brand, Type, Size);
+            return new BicycleBase(Brand, Type);
         }
 
-        public (string, string, string) GetBicycleInfo()
-        {
-            return (Brand, Type, Size);
-        }
-
-        public object Clone()
+        public virtual object Clone()
         {
             return MyCloneBicycle();
         }
