@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HW9_CSharpProfessional.Abstractions
 {
+    /// <summary>
+    /// Родительский класс
+    /// </summary>
     public class BicycleBase: IMyCloneable<BicycleBase>, ICloneable
     {
         public string Brand { get; set; }
