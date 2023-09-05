@@ -1,9 +1,5 @@
 ﻿using HW9_CSharpProfessional.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace HW9_CSharpProfessional.Implementations
 {
@@ -25,11 +21,10 @@ namespace HW9_CSharpProfessional.Implementations
 
         public override Bicycle MyCloneBicycle()
         {
-            Bicycle bicycle = new(Brand, Type, Transmission, Wheels, Frame);
-            return bicycle;
+            return new(Brand, Type, Transmission, Wheels, Frame);
         }
 
-        public override Bicycle Clone()
+        public override object Clone()
         {
             return MyCloneBicycle();
         }

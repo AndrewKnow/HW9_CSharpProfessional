@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace HW9_CSharpProfessional.Implementations
 {
     /// <summary>
@@ -22,10 +17,11 @@ namespace HW9_CSharpProfessional.Implementations
             return new MountainBicycle(Brand, Type, Transmission, Wheels, Frame, Price);
         }
 
-        public override Bicycle Clone()
+        public override object Clone()
         {
             return MyCloneBicycle();
         }
+
 
     }
 }

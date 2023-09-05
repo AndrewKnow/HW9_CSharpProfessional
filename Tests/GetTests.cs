@@ -11,7 +11,7 @@ namespace Tests
     {
         public Bicycle GetBicycle()
         {
-            return new Bicycle("Школьник", "Детский", "Зубчатая", "16", "Открытая");
+            return new Bicycle("1", "2", "3", "4", "5");
         }
     }
 }

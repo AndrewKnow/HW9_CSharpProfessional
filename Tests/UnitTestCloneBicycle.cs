@@ -21,11 +21,11 @@ namespace Tests
             Assert.AreEqual(bicycle.Wheels, cloneBicycly.Wheels);
             Assert.AreEqual(bicycle.Frame, cloneBicycly.Frame);
 
-            cloneBicycly.Brand = "Кама";
-            cloneBicycly.Type = "Взрослый";
-            cloneBicycly.Transmission = "Гидравлическая";
-            cloneBicycly.Wheels = "14";
-            cloneBicycly.Frame = "Алюминевая";
+            cloneBicycly.Brand = "10";
+            cloneBicycly.Type = "20";
+            cloneBicycly.Transmission = "30";
+            cloneBicycly.Wheels = "40";
+            cloneBicycly.Frame = "50";
 
             Assert.AreNotEqual(bicycle.Brand, cloneBicycly.Brand);
             Assert.AreNotEqual(bicycle.Type, cloneBicycly.Type);
@@ -38,7 +38,7 @@ namespace Tests
         public void TestCloneBicycle()
         {
             var bicycle = GetBicycle();
-            var cloneBicycly = bicycle.Clone();
+            var cloneBicycly = (Bicycle)bicycle.Clone();
 
             Assert.IsNotNull(cloneBicycly);
 
@@ -50,11 +50,11 @@ namespace Tests
             Assert.AreEqual(bicycle.Wheels, cloneBicycly.Wheels);
             Assert.AreEqual(bicycle.Frame, cloneBicycly.Frame);
 
-            cloneBicycly.Brand = "Кама";
-            cloneBicycly.Type = "Взрослый";
-            cloneBicycly.Transmission = "Гидравлическая";
-            cloneBicycly.Wheels = "14";
-            cloneBicycly.Frame = "Алюминевая";
+            cloneBicycly.Brand = "10";
+            cloneBicycly.Type = "20";
+            cloneBicycly.Transmission = "30";
+            cloneBicycly.Wheels = "40";
+            cloneBicycly.Frame = "50";
 
             Assert.AreNotEqual(bicycle.Brand, cloneBicycly.Brand);
             Assert.AreNotEqual(bicycle.Type, cloneBicycly.Type);
